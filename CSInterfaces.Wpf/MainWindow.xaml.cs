@@ -36,22 +36,25 @@ namespace CSInterfaces.Wpf
             Customer[] customers;
             customers = customerRepo.GetCustomers();
 
-            foreach (var customer in customers)
-            {
-                CustomerListBox.Items.Add(customer);
-            }
+            CustomerListBox.ItemsSource = customers;
+            //foreach (var customer in customers)
+            //{
+            //    CustomerListBox.Items.Add(customer);
+            //}
         }
 
         private void btnInterface_Click(object sender, RoutedEventArgs e)
         {
             ClearListBox();
-            IEnumerable customers;
+            IEnumerable<Customer> customers;
+            
             customers = customerRepo.GetCustomers();
+            CustomerListBox.ItemsSource = customers;
 
-            foreach (var customer in customers)
-            {
-                CustomerListBox.Items.Add(customer);
-            }
+            //foreach (var customer in customers)
+            //{
+            //    CustomerListBox.Items.Add(customer);
+            //}
         }
 
         private void btnInterface_Copy_Click(object sender, RoutedEventArgs e)
@@ -61,7 +64,8 @@ namespace CSInterfaces.Wpf
 
         private void ClearListBox()
         {
-            CustomerListBox.Items.Clear();
+            //CustomerListBox.Items.Clear();    
+            CustomerListBox.ItemsSource = null;
         }
     }
 }
