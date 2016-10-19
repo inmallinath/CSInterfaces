@@ -43,6 +43,7 @@
     <Compile Include="AbstractPolygon.cs" />
     <Compile Include="ConcretePolygon.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerRepository.cs" />
     <Compile Include="Hexagon.cs" />
     <Compile Include="IPolygonInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
