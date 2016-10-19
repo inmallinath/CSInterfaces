@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Customer Display Window" Height="392.549" Width="651.275" WindowStartupLocation="CenterScreen" Background="#FFFDFDFD">
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="352" Margin="244,0,0,0" VerticalAlignment="Top" Width="399"/>
-        <Button x:Name="btnConcrete" Content="Concrete Class" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="111" Cursor="None" Background="#FFEAE7E7"/>
-        <Button x:Name="btnInterface" Content="Interface" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="111" Cursor="None" Background="#FFEAE7E7" Margin="0,116,0,0"/>
-        <Button x:Name="btnInterface_Copy" Content="Clear Data" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="70" Cursor="None" Background="#FFEAE7E7" Margin="0,282,0,0"/>
+        <ListBox x:Name="CustomerListBox" HorizontalAlignment="Left" Height="352" Margin="244,0,0,0" VerticalAlignment="Top" Width="399"/>
+        <Button x:Name="btnConcrete" Content="Concrete Class" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="111" Cursor="None" Background="#FFEAE7E7" Click="btnConcrete_Click"/>
+        <Button x:Name="btnInterface" Content="Interface" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="111" Cursor="None" Background="#FFEAE7E7" Margin="0,116,0,0" Click="btnInterface_Click"/>
+        <Button x:Name="btnInterface_Copy" Content="Clear Data" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Height="70" Cursor="None" Background="#FFEAE7E7" Margin="0,282,0,0" Click="btnInterface_Copy_Click"/>
 
     </Grid>
 </Window>

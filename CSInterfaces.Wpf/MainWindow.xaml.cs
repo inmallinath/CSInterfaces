@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSInterfaces.Library;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,39 @@ namespace CSInterfaces.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        CustomerRepository customerRepo = new CustomerRepository();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnConcrete_Click(object sender, RoutedEventArgs e)
+        {
+            ClearListBox();
+
+            Customer[] customers;
+            customers = customerRepo.GetCustomers();
+
+            foreach (var customer in customers)
+            {
+                CustomerListBox.Items.Add(customer);
+            }
+        }
+
+        private void btnInterface_Click(object sender, RoutedEventArgs e)
+        {
+            ClearListBox();
+        }
+
+        private void btnInterface_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            ClearListBox();
+        }
+
+        private void ClearListBox()
+        {
+            CustomerListBox.Items.Clear();
         }
     }
 }

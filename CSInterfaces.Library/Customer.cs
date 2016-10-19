@@ -13,5 +13,10 @@ namespace CSInterfaces.Library
         public string EmailAddress { get; set; }
         public DateTime StartDate { get; set; }
         public int Rating { get; set; }
+
+        public override string ToString()
+        {
+            return FirstName + " \n" + LastName + "\n" + EmailAddress + "\n" + StartDate.ToShortDateString() + "\n" + Rating + "\r\n";
+        }
     }
 }
