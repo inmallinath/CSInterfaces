@@ -16,7 +16,7 @@ namespace CSInterfaces.ConsoleUI
             Console.Read();
         }
 
-        public static void ShowShape(string shapeType, ConcretePolygon shapeName)
+        public static void ShowShape(string shapeType, dynamic shapeName)
         {
             try
             {
