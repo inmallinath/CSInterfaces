@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AbstractPolygon.cs" />
     <Compile Include="ConcretePolygon.cs" />
+    <Compile Include="Hexagon.cs" />
     <Compile Include="IPolygonInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Square.cs" />

@@ -17,6 +17,9 @@ namespace CSInterfaces.ConsoleUI
             var triangle = new Triangle(4);
             ShowShape("Triangle", triangle);
 
+            var hexagon = new Hexagon(4);
+            ShowShape("Hexagon", hexagon);
+
             Console.Read();
         }
 
