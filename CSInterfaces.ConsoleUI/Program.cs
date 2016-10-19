@@ -27,7 +27,7 @@ namespace CSInterfaces.ConsoleUI
                 Console.WriteLine("{0} Number of Sides {1}", shapeType, shapeName.NumberOfSides);
                 Console.WriteLine("{0} Length: {1}", shapeType, shapeName.Length);
                 Console.WriteLine("{0} Perimeter: {1}", shapeType, shapeName.GetPerimeter());
-                Console.WriteLine("{0} Area: {1}", shapeType, shapeName.GetArea());
+                Console.WriteLine("{0} Area: {1} \n", shapeType, shapeName.GetArea());
             }
             catch (Exception ex)
             {
