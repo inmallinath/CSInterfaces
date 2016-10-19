@@ -1,5 +1,6 @@
 ﻿using CSInterfaces.Library;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,6 +45,13 @@ namespace CSInterfaces.Wpf
         private void btnInterface_Click(object sender, RoutedEventArgs e)
         {
             ClearListBox();
+            IEnumerable customers;
+            customers = customerRepo.GetCustomers();
+
+            foreach (var customer in customers)
+            {
+                CustomerListBox.Items.Add(customer);
+            }
         }
 
         private void btnInterface_Copy_Click(object sender, RoutedEventArgs e)
