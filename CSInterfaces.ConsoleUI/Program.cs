@@ -13,6 +13,10 @@ namespace CSInterfaces.ConsoleUI
         {
             var square = new Square(4);
             ShowShape("Square", square);
+
+            var triangle = new Triangle(4);
+            ShowShape("Triangle", triangle);
+
             Console.Read();
         }
 
