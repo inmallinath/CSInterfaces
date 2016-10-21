@@ -1,0 +1,17 @@
+﻿<Window x:Class="CSInterfaces.CustomerViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSInterfaces.CustomerViewer"
+        mc:Ignorable="d"
+        Title="Extend your Application with Interfaces" Height="444.706" Width="719.902">
+    <Grid>
+        <Button x:Name="btnService" Content="Service Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,10,0,0" FontSize="20"/>
+        <Button x:Name="btnCSV" Content="CSV Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,108,0,0" FontSize="20"/>
+        <Button x:Name="btnSQL" Content="SQL Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,205,0,0" FontSize="20"/>
+        <Button x:Name="btnClear" Content="Clear Data" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,326,0,0" FontSize="20" Click="btnSQL_Copy_Click"/>
+        <ListBox x:Name="lstCustomers" HorizontalAlignment="Left" Height="394" Margin="200,10,0,0" VerticalAlignment="Top" Width="502"/>
+
+    </Grid>
+</Window>
