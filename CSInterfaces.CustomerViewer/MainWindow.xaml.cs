@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CSInterfacesRepository.Service;
+using CSInterfaces.Library;
 
 namespace CSInterfaces.CustomerViewer
 {
@@ -23,6 +25,29 @@ namespace CSInterfaces.CustomerViewer
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnService_Click(object sender, RoutedEventArgs e)
+        {
+            ClearListBox();
+
+            ICustomerRepository serviceRepo = new ServiceRepository();
+            var customers = serviceRepo.GetCustomers();
+            foreach (var customer in customers)
+            {
+                lstCustomers.Items.Add(customer);
+            }
+            ShowRepositoryType(serviceRepo);
+        }
+
+        public void ClearListBox()
+        {
+            lstCustomers.Items.Clear();
+        }
+
+        private void ShowRepositoryType(ICustomerRepository repository)
+        {
+            MessageBox.Show(string.Format("Repository Type: \n {0}", repository.GetType().ToString()));
         }
     }
 }
