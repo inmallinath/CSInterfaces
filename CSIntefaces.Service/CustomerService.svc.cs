@@ -35,19 +35,12 @@ namespace CSIntefaces.Service
             throw new NotImplementedException();
         }
 
-        
-
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public void UpdateCustomer(List<Customer> updatedCustomer)
+        public void UpdateCustomer(string lastName, Customer updatedCustomer)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer(string lastName, Customer updatedCustomer)
+        public void UpdateCustomers(List<Customer> updatedCustomers)
         {
             throw new NotImplementedException();
         }

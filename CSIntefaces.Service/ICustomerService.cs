@@ -24,6 +24,6 @@ namespace CSIntefaces.Service
         void DeleteCustomer(string lastName);
 
         [OperationContract]
-        void UpdateCustomer(List<Customer> updatedCustomer);
+        void UpdateCustomers(List<Customer> updatedCustomers);
     }
 }
