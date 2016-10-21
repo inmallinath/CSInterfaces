@@ -8,7 +8,7 @@ namespace CSInterfaces.Library
 {
     public interface ICustomerRepository
     {
-        IEnumerable<Customer> GetCustomer();
+        IEnumerable<Customer> GetCustomers();
 
         Customer GetCustomer(string lastName);
 
