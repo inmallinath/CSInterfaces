@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CD91C5B-192D-4835-8876-E2462E428CBF}</ProjectGuid>
+    <ProjectGuid>{3C275BC0-6F6A-478F-B272-63F9D02C97AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSInterfacesRepository.Service</RootNamespace>

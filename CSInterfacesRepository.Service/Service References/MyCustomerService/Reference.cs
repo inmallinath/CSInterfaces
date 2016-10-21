@@ -16,10 +16,10 @@ namespace CSInterfacesRepository.Service.MyCustomerService {
     public interface ICustomerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetCustomers", ReplyAction="http://tempuri.org/ICustomerService/GetCustomersResponse")]
-        CSInterfaces.Library.Customer[] GetCustomers();
+        System.Collections.Generic.List<CSInterfaces.Library.Customer> GetCustomers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetCustomers", ReplyAction="http://tempuri.org/ICustomerService/GetCustomersResponse")]
-        System.Threading.Tasks.Task<CSInterfaces.Library.Customer[]> GetCustomersAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CSInterfaces.Library.Customer>> GetCustomersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetCustomer", ReplyAction="http://tempuri.org/ICustomerService/GetCustomerResponse")]
         CSInterfaces.Library.Customer GetCustomer(string lastName);
@@ -46,10 +46,10 @@ namespace CSInterfacesRepository.Service.MyCustomerService {
         System.Threading.Tasks.Task DeleteCustomerAsync(string lastName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/UpdateCustomers", ReplyAction="http://tempuri.org/ICustomerService/UpdateCustomersResponse")]
-        void UpdateCustomers(CSInterfaces.Library.Customer[] updatedCustomers);
+        void UpdateCustomers(System.Collections.Generic.List<CSInterfaces.Library.Customer> updatedCustomers);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/UpdateCustomers", ReplyAction="http://tempuri.org/ICustomerService/UpdateCustomersResponse")]
-        System.Threading.Tasks.Task UpdateCustomersAsync(CSInterfaces.Library.Customer[] updatedCustomers);
+        System.Threading.Tasks.Task UpdateCustomersAsync(System.Collections.Generic.List<CSInterfaces.Library.Customer> updatedCustomers);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -79,11 +79,11 @@ namespace CSInterfacesRepository.Service.MyCustomerService {
                 base(binding, remoteAddress) {
         }
         
-        public CSInterfaces.Library.Customer[] GetCustomers() {
+        public System.Collections.Generic.List<CSInterfaces.Library.Customer> GetCustomers() {
             return base.Channel.GetCustomers();
         }
         
-        public System.Threading.Tasks.Task<CSInterfaces.Library.Customer[]> GetCustomersAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CSInterfaces.Library.Customer>> GetCustomersAsync() {
             return base.Channel.GetCustomersAsync();
         }
         
@@ -119,11 +119,11 @@ namespace CSInterfacesRepository.Service.MyCustomerService {
             return base.Channel.DeleteCustomerAsync(lastName);
         }
         
-        public void UpdateCustomers(CSInterfaces.Library.Customer[] updatedCustomers) {
+        public void UpdateCustomers(System.Collections.Generic.List<CSInterfaces.Library.Customer> updatedCustomers) {
             base.Channel.UpdateCustomers(updatedCustomers);
         }
         
-        public System.Threading.Tasks.Task UpdateCustomersAsync(CSInterfaces.Library.Customer[] updatedCustomers) {
+        public System.Threading.Tasks.Task UpdateCustomersAsync(System.Collections.Generic.List<CSInterfaces.Library.Customer> updatedCustomers) {
             return base.Channel.UpdateCustomersAsync(updatedCustomers);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using CSInterfaces.Library;
+using CSInterfacesRepository.Service.MyCustomerService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,34 +10,36 @@ namespace CSInterfacesRepository.Service
 {
     public class ServiceRepository : ICustomerRepository
     {
+        CustomerServiceClient serviceProxy = new CustomerServiceClient();
+
+        public IEnumerable<Customer> GetCustomers()
+        {
+            return serviceProxy.GetCustomers();
+        }
+
         public void AddCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            serviceProxy.AddCustomer(customer);
         }
 
         public void DeleteCustomer(string lastName)
         {
-            throw new NotImplementedException();
+            serviceProxy.DeleteCustomer(lastName);
         }
 
         public Customer GetCustomer(string lastName)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Customer> GetCustomers()
-        {
-            throw new NotImplementedException();
+            return serviceProxy.GetCustomer(lastName);
         }
 
         public void UpdateCustomer(string lastName, Customer updatedCustomer)
         {
-            throw new NotImplementedException();
+            serviceProxy.UpdateCustomer(lastName, updatedCustomer);
         }
 
         public void UpdateCustomers(IEnumerable<Customer> updatedCustomers)
         {
-            throw new NotImplementedException();
+            serviceProxy.UpdateCustomers(updatedCustomers.ToList());
         }
     }
 }
