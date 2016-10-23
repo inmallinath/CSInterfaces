@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CSInterfacesRepository.Service;
 using CSInterfaces.Library;
+using CSInterfacesRepository.CSV;
 
 namespace CSInterfaces.CustomerViewer
 {
@@ -48,6 +49,19 @@ namespace CSInterfaces.CustomerViewer
         private void ShowRepositoryType(ICustomerRepository repository)
         {
             MessageBox.Show(string.Format("Repository Type: \n {0}", repository.GetType().ToString()));
+        }
+
+        private void btnCSV_Click(object sender, RoutedEventArgs e)
+        {
+            ClearListBox();
+
+            ICustomerRepository csvRepo = new CSVRepository();
+            var customers = csvRepo.GetCustomers();
+            foreach (var customer in customers)
+            {
+                lstCustomers.Items.Add(customer);
+            }
+            ShowRepositoryType(csvRepo);
         }
     }
 }

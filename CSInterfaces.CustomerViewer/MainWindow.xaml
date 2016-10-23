@@ -8,7 +8,7 @@
         Title="Extend your Application with Interfaces" Height="444.706" Width="719.902" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="btnService" Content="Service Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,10,0,0" FontSize="20" Click="btnService_Click"/>
-        <Button x:Name="btnCSV" Content="CSV Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,108,0,0" FontSize="20"/>
+        <Button x:Name="btnCSV" Content="CSV Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,108,0,0" FontSize="20" Click="btnCSV_Click"/>
         <Button x:Name="btnSQL" Content="SQL Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,205,0,0" FontSize="20"/>
         <Button x:Name="btnClear" Content="Clear Data" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Height="78" Margin="10,326,0,0" FontSize="20"/>
         <ListBox x:Name="lstCustomers" HorizontalAlignment="Left" Height="394" Margin="189,10,0,0" VerticalAlignment="Top" Width="513"/>
